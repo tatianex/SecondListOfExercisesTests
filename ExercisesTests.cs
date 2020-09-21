@@ -24,12 +24,12 @@ namespace entra21_tests_list2
             Assert.Equal(expected, result);
         }
 
-        [Theory]
+        /* [Theory]
         [InlineData(
             new double[10]{19, 35, 46, 71, 99, 84, 15, 16, 61, 12}, (new double[10]{19, 35, 46, 71, 99, 84, 15, 16, 61, 12}, new double[10]{12, 61, 16, 15, 84, 99, 71, 46, 35, 19})
             //new double[10]{9.5, 7.8, 8.5, 7, 6.8, 8.3, 10, 8.7, 9, 8},
             //new double[10]{-47, 52.5, -70, 100, -88.9, 150, -65.7, -33.5, 200, 10},
-        )]
+        )] */
         public void should_return_numbers_as_they_were_typed_and_backwards(double[] numbers, (double[], double[]) expected)
         {
             var exercises = new Exercises();
