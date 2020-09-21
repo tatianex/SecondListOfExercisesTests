@@ -20,7 +20,7 @@ namespace entra21_tests_list2
 
         public (double[], double[]) Exercise2(double[] numbers)
         {
-            var numbersBackwards = numbers;
+            double[] numbersBackwards = (Double[])numbers.Clone();
             Array.Reverse(numbersBackwards);
 
             var result = (numbers, numbersBackwards);
