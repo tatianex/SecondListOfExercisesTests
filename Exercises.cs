@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 
 namespace entra21_tests_list2
 {
@@ -25,6 +26,11 @@ namespace entra21_tests_list2
 
             var result = (numbers, numbersBackwards);
             return result;
+        }
+
+        public bool Exercise3(double[] numbers, double request)
+        {            
+            return numbers.Contains(request);
         }
     }
 }

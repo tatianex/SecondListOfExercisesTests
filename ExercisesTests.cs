@@ -30,14 +30,27 @@ namespace entra21_tests_list2
             new double[10]{9.5, 7.8, 8.5, 7, 6.8, 8.3, 10, 8.7, 9, 8}, new double[10]{8, 9, 8.7, 10, 8.3, 6.8, 7, 8.5, 7.8, 9.5},
             new double[10]{-47, 52.5, -70, 100, -88.9, 150, -65.7, -33.5, 200, 10}, new double[10]{10, 200, -33.5, -65.7, 150, -88.9, 100, -70, 52.5, -47}
         )]
-        public void should_return_numbers_as_they_were_typed_and_backwards(double[] numbers, double[] expectedReverse)
+        public void should_return_numbers_as_they_were_typed_and_backwards(double[] numbers, double[] numbersReverse)
         {
             var exercises = new Exercises();
 
             (double[], double[]) result = exercises.Exercise2(numbers);
             
             Assert.Equal(numbers, result.Item1);
-            Assert.Equal(expectedReverse, result.Item2);
+            Assert.Equal(numbersReverse, result.Item2);
+        }
+
+        [Theory]
+        [InlineData (new double[10]{7.5, 9.8, 8.5, 6.7, 9.5, 8.3, 7.3, 6.7, 9.6, 8.4}, 9.5, true)]
+        [InlineData (new double[10]{8, 9, 7, 5, 12, 150, 89, 75, 19, 13}, 13, true)]
+        [InlineData (new double[10]{-77, 85, -98, -45, -30, 18, -21, -83, -12, 15}, -21, true)]
+        public void should_return_numbers(double[] numbers, double request, bool answer)
+        {
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise3(numbers, request);
+
+            Assert.Equal(answer, result);
         }
     }
 }
