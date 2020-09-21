@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace entra21_tests_list2
 {
@@ -17,6 +16,15 @@ namespace entra21_tests_list2
             }
 
             return listOfNumbers3;
+        }
+
+        public (double[], double[]) Exercise2(double[] numbers)
+        {
+            var numbersBackwards = numbers;
+            Array.Reverse(numbersBackwards);
+
+            var result = (numbers, numbersBackwards);
+            return result;
         }
     }
 }
