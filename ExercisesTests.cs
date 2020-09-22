@@ -54,6 +54,7 @@ namespace entra21_tests_list2
         [Theory]
         [InlineData (new double[10]{8, 21, 52, 87, 99, 116, -15, -24, 9.5, 14.7}, new double[10]{59, 75, 74, -33, -55.8, 66, -7, 9.1, 60, 11}, false)]
         [InlineData (new double[10]{8, 21, 52, 87, 99, 116, -15, -24, 9.5, 14.7}, new double[10]{8, 21, 52, 87, 99, 116, -15, -24, 9.5, 14.7}, true)]
+        [InlineData (new double[10]{8, 21, 52, 87, 99, 116, -15, -24, 9.50, 14.70}, new double[10]{8, 21, 52, 87, 99, 116, -15, -24, 9.55, 13.70}, false)]
         public void should_return_true_if_arrays_are_equal_and_false_if_they_are_not(double[] array1, double[] array2, bool expected)
         {
             var exercises = new Exercises();

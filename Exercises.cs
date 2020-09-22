@@ -43,8 +43,13 @@ namespace entra21_tests_list2
             {
                 for (int j = 0; j < arraysLenght; j++)
                 {
-                    if (array1[i] == array2[j])
-                    areEqual = true;
+                    if (Math.Round(array1[i], 2) == Math.Round(array2[j], 2))
+                    {
+                        areEqual = true;
+                        break;
+                    }
+                    else areEqual = false;
+                    
                 }
             }
 
