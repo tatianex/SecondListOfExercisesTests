@@ -32,5 +32,26 @@ namespace entra21_tests_list2
         {            
             return numbers.Contains(request);
         }
+
+        public bool Exercise4(double[] array1, double[] array2)
+        {          
+            const int arraysLenght = 10;
+            var areEqual = false;
+            var arraysAreEqual = false;
+
+            for (int i = 0; i < arraysLenght; i++)
+            {
+                for (int j = 0; j < arraysLenght; j++)
+                {
+                    if (array1[i] == array2[j])
+                    areEqual = true;
+                }
+            }
+
+            if (!areEqual) arraysAreEqual = false;
+            else arraysAreEqual = true;
+
+            return arraysAreEqual;
+        }
     }
 }
