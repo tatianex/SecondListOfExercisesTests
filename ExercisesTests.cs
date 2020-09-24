@@ -75,5 +75,25 @@ namespace entra21_tests_list2
 
             Assert.Equal(expected, result);
         }
+    
+        [Theory]
+        [InlineData(
+            new double[12]{28, 30.8, 18, -15, -62, 22, 41, 14.5, 57, 79.6, 11, 37},
+            new double[12]{5, 31, 12, -2, 38, -7.9, -27.4, 88.3, 71, 20, 52.5, 6},
+            new double[12]{26.30, 36.80, 39.00, 40.00, 42.00, 42.00, 49.00, 49.10, 52.20, 52.50, 56.00, 63.50}
+        )]
+        [InlineData(
+            new double[12]{55, -62, 33, 13, 9, -44.5, -19.7, 11.1, 29, 40, 82.7, 36},
+            new double[12]{87, 91, -45, 16.9, -21, 25, -68.4, 34, 14.9, -18, -4.6, 52},
+            new double[12]{10.00, 14.30, 18.00, 19.00, 28.40, 29.00, 29.90, 32.30, 36.10, 42.50, 43.00, 43.90}
+        )]
+        public void should_return_one_array_with_the_sum_of_the_ones_passed(double[] array1, double[] array2, double[] expected)
+        {
+            var exercises = new Exercises();
+
+            var result = exercises.Exercise6(array1, array2);
+
+            Assert.Equal(expected, result);
+        }
     }
 }

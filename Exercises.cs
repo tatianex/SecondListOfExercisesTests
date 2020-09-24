@@ -80,5 +80,23 @@ namespace entra21_tests_list2
             var result = new int[3]{belowAverage, aboveAverage, equalAverage};
             return result;
         }
+    
+        public double[] Exercise6(double[] array1, double[] array2)
+        {
+            var array3 = new double[12];
+
+            Array.Sort(array1);
+            Array.Sort(array2);
+            Array.Reverse(array2);
+
+            for (int i = 0; i < array1.Length; i++)
+            {
+                var sum = array1[i] + array2[i];
+                array3[i] = Math.Round(sum, 2);
+            }
+
+            Array.Sort(array3);
+            return array3;
+        }
     }
 }
