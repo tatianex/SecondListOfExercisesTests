@@ -59,24 +59,25 @@ namespace entra21_tests_list2
             return arraysAreEqual;
         }
     
-        public double[] Exercise5(double[] numbers)
+        public int[] Exercise5(double[] numbers)
         {
-            int sum = 0;
+            double sum = 0;
             double average = 0.0d;
             int belowAverage = 0;
             int aboveAverage = 0;
             int equalAverage = 0;
 
-            foreach (int value in numbers) sum += value;
+            foreach (double value in numbers) sum += value;
             average = sum / numbers.Length;
             
-            foreach (int value in numbers) {
+            foreach (double value in numbers)
+            {
                 if (value < average) belowAverage++;
                 else if (value > average) aboveAverage++;
                 else equalAverage++;
             }
 
-            var result = new double[3]{belowAverage, aboveAverage, equalAverage};
+            var result = new int[3]{belowAverage, aboveAverage, equalAverage};
             return result;
         }
     }

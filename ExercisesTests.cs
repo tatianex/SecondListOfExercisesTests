@@ -65,9 +65,9 @@ namespace entra21_tests_list2
         }
     
         [Theory]
-        [InlineData (new double[15]{17, 19.5, 3, -4, -77, -65, 47, 18, 21, 34, 69.5, 45.1, 56, -99, -88.7}, new double[3]{5, 10, 0})]
-        [InlineData (new double[15]{55, 5.7, 49, 71, -34, 20.6, -88, 46.8, 10, 58, 13.4, -27.3, -31.7, -36, 90}, new double[3]{7, 7, 1})]
-        public void should_return_the_arithmetic_average_and_inform_which_ones_are_on_above_and_below_average(double[] numbers, double[] expected)
+        [InlineData (new double[15]{17, 19.5, 3, -4, -77, -65, 47, 18, 21, 34, 69.5, 45.1, 56, -99, -88.7}, new int[3]{5, 10, 0})]
+        [InlineData (new double[15]{55, 5.7, 49, 71, -34, 20.6, -88, 46.8, 10, 58, 13.4, -27.3, -31.7, -36, 90}, new int[3]{8, 7, 0})]
+        public void should_return_the_arithmetic_average_and_inform_which_ones_are_on_above_and_below_average(double[] numbers, int[] expected)
         {
             var exercises = new Exercises();
 
